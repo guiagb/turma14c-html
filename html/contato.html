@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Gama Academy</title>
+
+    <!-- fazendo a chamada de um estilo na bib -->
+    <link rel="stylesheet" a href="../css/estilo.css">
+
+</head>
+
+<body>
+    <!--criando o menu da nossa pagina-->
+    <table border=0 width="100%" class="menu">
+        <tr>
+            <td align="center">
+                <a href="../html/index.html">
+                    <img src="../imagens/logo.png" width="160" hight="40">
+                </a>
+            </td>
+            <td>QUEM SOMOMS</td>
+            <td>CURSOS ONLINE</td>
+            <td>PARA EMPRESAS</td>
+            <td>CONTATO</td>
+            <td>CONTEÚDOS</td>
+        </tr>
+    </table>
+
+    <!-- inserindo uma quebra de linha -->
+    <br>
+
+    <!-- construindo o formulario com os campos -->
+    <form id="formulario_contato" method="POST">
+        <fieldset>
+            <legend class="menu"><b>Preencha o nosso formulario para realizar os nossos cursos</b></legend><br>
+            <label>Nome do aluno(a):</label><input type="text" name="nome" required class="campo_nome"><br><br>
+            <label>E-mail</label><input type="email" required><br><br>
+            <label>Senha Acesso</label><input type="password" name="senha" required><br><br>
+            <label>Genero</label>
+            <input type="radio" name="opcao_radio" value="Feminino" checked/> Feminino
+            <input type="radio" name="opcao_radio" value="Masculino" /> Masculino
+            <input type="radio" name="opcao_radio" value="Não Informado" /> Não informado<br><br>
+            <label>Escolha o curso desejado</label>
+            <select required>
+                <option name="curso" value=""></option>
+                <option name="curso" value="HTML">HTML</option>
+                <option name="curso" value="CSS">CSS</option>
+                <option name="curso" value="JavaScript">JavaScript</option>
+                <option name="curso" value="XML">XML</option>
+            </select><br><br>
+            <label>Escolha o periodo do curso</label>
+            <input type="checkbox" name="opcao_check" value="manha"> Manhã
+            <input type="checkbox" name="opcao_check" value="tarde"> Tarde
+            <input type="checkbox" name="opcao_check" value="noite"> Noite<br><br>
+            <label>Escolha a data de realização do curso</label><input type="date" name="data"><br><br>
+            <label>Mensagem</label><br>
+            <textarea name="mensagem" cols="40" rows="4"></textarea><br><br>
+            <label>Comprovante de residencia</label><br><input type="file" name="arquivo"><br><br>  
+            <input type="submit" value="Enviar">
+
+        </fieldset>
+
+    </form>
+</body>
+
+</html>

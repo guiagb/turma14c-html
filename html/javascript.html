@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+
+    <script>
+        //alert("bem vindo");
+        //var empresa = "itau";
+        //var mensagem = "seja bem vindo a ";
+        //alert(mensagem+empresa);
+
+        //alert(prompt("qual seu nome?"));
+        //var nome = prompt("qual seu nome?","nome");
+        function func(){
+            alert("funcao");
+        }   
+        function validar(){
+            var nome = formuser.meunome.value;
+            var email = formuser.meuemail.value;
+            var senha = formuser.minhasenha.value;
+            
+            if (nome==""){
+                alert("NOME OBRIGATORIO");
+                formuser.meunome.focus();
+                return false;
+            }
+            if (email=="" || email.indexOf("@")==-1){
+                alert("EMAIL INVALIDO");
+                formuser.meuemail.focus();
+                return false;
+            }
+            if (senha=="" || senha.length<=5){
+                alert("SENHA INVALIDA");
+                formuser.meuemail.focus();
+                return false;
+            }
+        }   
+    </script>
+
+</head>
+<body>
+    
+    <h3>Clique no botao abaixo</h3>
+    <input type="button" onclick="func()" value="botao">
+    <br><br><br><br>
+    <form id="formuser" method="POST">
+        nome do user: <input type="text" name="meunome"><br><br>
+        email do user: <input type="text" name="meuemail"><br><br>
+        senha do user: <input type="password" name="minhasenha"><br><br>
+        <input type="submit" onclick="return validar()" value="validar">
+    </form>
+    
+
+</body>
+</html>
